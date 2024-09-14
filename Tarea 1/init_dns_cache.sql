@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS dns_queries (
+    id SERIAL PRIMARY KEY,
+    domain VARCHAR(255) NOT NULL,
+    ip_address VARCHAR(255) NOT NULL,
+    query_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
