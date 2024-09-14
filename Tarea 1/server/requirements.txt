@@ -1,5 +1,0 @@
-psycopg2-binary
-redis
-grpcio
-grpcio-tools
-
