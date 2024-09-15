@@ -33,11 +33,75 @@ services:
       - ./postgres_memory_data:/var/lib/postgresql/data
 
   # Servicio Redis (cache)
-  redis:
+  redis1:
     image: redis:alpine
-    container_name: redis_cache
+    container_name: redis1
+    command: ["redis-server", "--maxmemory", "2mb", "--maxmemory-policy", "allkeys-lfu"]
     ports:
-      - "6379:6379"
+      - "6380:6379"
+    networks:
+      - app-network
+
+  redis2:
+    image: redis:alpine
+    container_name: redis2
+    command: ["redis-server", "--maxmemory", "10mb", "--maxmemory-policy", "allkeys-lfu"]
+    ports:
+      - "6381:6379"
+    networks:
+      - app-network
+
+  redis3:
+    image: redis:alpine
+    container_name: redis3
+    command: ["redis-server", "--maxmemory", "10mb", "--maxmemory-policy", "allkeys-lfu"]
+    ports:
+      - "6382:6379"
+    networks:
+      - app-network
+
+  redis4:
+    image: redis:alpine
+    container_name: redis4
+    command: ["redis-server", "--maxmemory", "10mb", "--maxmemory-policy", "allkeys-lfu"]
+    ports:
+      - "6383:6379"
+    networks:
+      - app-network
+
+  redis5:
+    image: redis:alpine
+    container_name: redis5
+    command: ["redis-server", "--maxmemory", "10mb", "--maxmemory-policy", "allkeys-lfu"]
+    ports:
+      - "6384:6379"
+    networks:
+      - app-network
+
+  redis6:
+    image: redis:alpine
+    container_name: redis6
+    command: ["redis-server", "--maxmemory", "10mb", "--maxmemory-policy", "allkeys-lfu"]
+    ports:
+      - "6385:6379"
+    networks:
+      - app-network
+
+  redis7:
+    image: redis:alpine
+    container_name: redis7
+    command: ["redis-server", "--maxmemory", "10mb", "--maxmemory-policy", "allkeys-lfu"]
+    ports:
+      - "6386:6379"
+    networks:
+      - app-network
+
+  redis8:
+    image: redis:alpine
+    container_name: redis8
+    command: ["redis-server", "--maxmemory", "10mb", "--maxmemory-policy", "allkeys-lfu"]
+    ports:
+      - "6387:6379"
     networks:
       - app-network
 
@@ -50,7 +114,14 @@ services:
       - ./server:/usr/src/app
     depends_on:
       - postgres
-      - redis
+      - redis1
+      - redis2
+      - redis3
+      - redis4
+      - redis5
+      - redis6
+      - redis7
+      - redis8
     ports:
       - "50051:50051"  # Puerto para gRPC
     networks:
@@ -60,7 +131,7 @@ services:
       POSTGRES_DB: dns_cache
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
-      REDIS_HOST: redis
+      REDIS_HOST: redis1
 
   # Servicio del cliente gRPC
   client:

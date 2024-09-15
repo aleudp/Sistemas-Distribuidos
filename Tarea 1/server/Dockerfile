@@ -18,9 +18,8 @@ COPY . .
 
 # Exponer el puerto del servidor gRPC
 EXPOSE 50051
-COPY wait-for-it.sh /usr/src/app/wait-for-it.sh
-ENTRYPOINT ["/usr/src/app/wait-for-it.sh", "postgres:5432", "--", "python3", "server.py"]
 
+# ENTRYPOINT ["/usr/src/app/wait-for-it.sh", "postgres:5432", "--", "python3", "server.py"]
 
 # Ejecutar el servidor gRPC
 CMD ["python3", "-u", "server.py"]
