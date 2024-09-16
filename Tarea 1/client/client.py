@@ -4,8 +4,9 @@ import dns_pb2_grpc
 import psycopg2
 import time
 from concurrent import futures
+import random
 
-# Función para conectarse a PostgreSQL y obtener los primeros 50000 dominios
+# Función para conectarse a PostgreSQL y obtener los primeros 50,000 dominios
 def get_domains_from_db():
     try:
         # Conexión a la base de datos PostgreSQL
@@ -18,8 +19,8 @@ def get_domains_from_db():
         )
         cursor = conn.cursor()
         
-        # Consulta para obtener los primeros 50000 dominios de la tabla 'domains'
-        cursor.execute("SELECT domain FROM domains LIMIT 50000")
+        # Consulta para obtener los primeros 50,000 dominios de la tabla 'domains'
+        cursor.execute("SELECT domain FROM domains LIMIT 500")
         domains = cursor.fetchall()
         return [domain[0] for domain in domains]  # Devuelve solo los nombres de dominio
     except Exception as e:
@@ -37,21 +38,25 @@ def resolve_domain(stub, domain):
 
 # Función para generar tráfico de consultas DNS en paralelo
 def generate_traffic(stub, domains):
-    # Limitar a los primeros 50,000 dominios
-    limited_domains = domains[:100]
+    total_queries = 750
+    unique_domains = len(domains)
 
     # Usar un ThreadPoolExecutor para ejecutar las consultas en paralelo
     with futures.ThreadPoolExecutor(max_workers=20) as executor:
-        # Hacer una consulta por cada uno de los 50,000 dominios en paralelo
-        futures_list = [executor.submit(resolve_domain, stub, domain) for domain in limited_domains]
-        # Esperar a que se completen todas las consultas
+        # Primero, enviar una consulta para cada uno de los 50,000 dominios
+        futures_list = [executor.submit(resolve_domain, stub, domain) for domain in domains]
         futures.wait(futures_list)
-    
-        # Repetir los primeros 25 dominios 999 veces cada uno (total de 1000 consultas por dominio) en paralelo
-        first_25_domains = limited_domains[:25]
-        for domain in first_25_domains:
-            futures_list = [executor.submit(resolve_domain, stub, domain) for _ in range(2)]
-            futures.wait(futures_list)  # Esperar a que todas las repeticiones de cada dominio terminen
+
+        # Ahora, seleccionar algunos dominios y hacer consultas adicionales para llegar a 75,000
+        additional_queries_needed = total_queries - unique_domains
+        if additional_queries_needed > 0:
+            # Elegimos los primeros 100 dominios como más "populares" y les hacemos más consultas
+            popular_domains = domains[:25]
+            
+            # Hacemos consultas adicionales de manera distribuida entre los dominios populares
+            for _ in range(additional_queries_needed):
+                domain = random.choice(popular_domains)  # Selecciona aleatoriamente un dominio popular
+                executor.submit(resolve_domain, stub, domain)
 
 # Función para intentar conectar con reintentos
 def connect_with_retries(stub, max_retries=5, wait_time=5):
