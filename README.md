@@ -20,7 +20,7 @@ https://www. kaggle.com/datasets/domainsindex/secondlevel-domains-listzone-file
 docker compose build
 ```
 
-<p>3. Cambiar puerto de base de datos postgres_memory en el archivo postres.conf cambiar línea:</p>
+<p>3. Cambiar puerto de base de datos postgres_memory_data en el archivo postressql.conf cambiar línea:</p>
 
 ```
 #Port 5432
@@ -35,11 +35,8 @@ Port 5433
 <p>6. Cambiar parámetros en archivo server.py dentro del directorio server acorde a la cantidad de particiones que se desea utilizar.</p>
 
 ```
-PARTITION=                                 
-```
-
-```
-Partition
+PARTITION_COUNT = 1 # Máximo de 8 particiones
+PARTITION_TYPE = 'range' # Puede ser 'hash' o 'range'```
 ```
 
 <p>8. Levantar los contenedores utilizando:</p>
