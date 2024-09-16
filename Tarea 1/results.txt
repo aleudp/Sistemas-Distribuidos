@@ -1,0 +1,13 @@
+Hit/Miss Rate:
+hit_rate  cantidad
+    MISS       328
+     HIT       123
+
+Tiempos de Respuesta (Promedio y Desviación Estándar):
+ partition_number  avg_response_time  stddev_response_time
+                0           0.022582              0.091839
+
+Balance de Carga (Peticiones por Partición):
+ dominio  partition_number
+     451                 0
+

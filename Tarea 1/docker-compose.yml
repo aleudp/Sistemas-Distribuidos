@@ -36,7 +36,7 @@ services:
   redis1:
     image: redis:alpine
     container_name: redis1
-    command: ["redis-server", "--maxmemory", "2mb", "--maxmemory-policy", "allkeys-lfu"]
+    command: ["redis-server", "--maxmemory", "16mb", "--maxmemory-policy", "allkeys-lru"]
     ports:
       - "6380:6379"
     networks:
@@ -45,7 +45,7 @@ services:
   redis2:
     image: redis:alpine
     container_name: redis2
-    command: ["redis-server", "--maxmemory", "10mb", "--maxmemory-policy", "allkeys-lfu"]
+    command: ["redis-server", "--maxmemory", "16mb", "--maxmemory-policy", "allkeys-lru"]
     ports:
       - "6381:6379"
     networks:
@@ -54,7 +54,7 @@ services:
   redis3:
     image: redis:alpine
     container_name: redis3
-    command: ["redis-server", "--maxmemory", "10mb", "--maxmemory-policy", "allkeys-lfu"]
+    command: ["redis-server", "--maxmemory", "4mb", "--maxmemory-policy", "allkeys-lru"]
     ports:
       - "6382:6379"
     networks:
@@ -63,7 +63,7 @@ services:
   redis4:
     image: redis:alpine
     container_name: redis4
-    command: ["redis-server", "--maxmemory", "10mb", "--maxmemory-policy", "allkeys-lfu"]
+    command: ["redis-server", "--maxmemory", "4mb", "--maxmemory-policy", "allkeys-lru"]
     ports:
       - "6383:6379"
     networks:
@@ -72,7 +72,7 @@ services:
   redis5:
     image: redis:alpine
     container_name: redis5
-    command: ["redis-server", "--maxmemory", "10mb", "--maxmemory-policy", "allkeys-lfu"]
+    command: ["redis-server", "--maxmemory", "4mb", "--maxmemory-policy", "allkeys-lru"]
     ports:
       - "6384:6379"
     networks:
@@ -81,7 +81,7 @@ services:
   redis6:
     image: redis:alpine
     container_name: redis6
-    command: ["redis-server", "--maxmemory", "10mb", "--maxmemory-policy", "allkeys-lfu"]
+    command: ["redis-server", "--maxmemory", "4mb", "--maxmemory-policy", "allkeys-lru"]
     ports:
       - "6385:6379"
     networks:
@@ -90,7 +90,7 @@ services:
   redis7:
     image: redis:alpine
     container_name: redis7
-    command: ["redis-server", "--maxmemory", "10mb", "--maxmemory-policy", "allkeys-lfu"]
+    command: ["redis-server", "--maxmemory", "4mb", "--maxmemory-policy", "allkeys-lru"]
     ports:
       - "6386:6379"
     networks:
@@ -99,7 +99,7 @@ services:
   redis8:
     image: redis:alpine
     container_name: redis8
-    command: ["redis-server", "--maxmemory", "10mb", "--maxmemory-policy", "allkeys-lfu"]
+    command: ["redis-server", "--maxmemory", "4mb", "--maxmemory-policy", "allkeys-lru"]
     ports:
       - "6387:6379"
     networks:
