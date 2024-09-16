@@ -8,7 +8,7 @@ import dns_pb2
 import subprocess
 
 # Configuración de particiones y tipo de partición
-PARTITION_COUNT = 4 # Máximo de 8 particiones
+PARTITION_COUNT = 1 # Máximo de 8 particiones
 PARTITION_TYPE = 'range' # Puede ser 'hash' o 'range'
 
 # Intentar reconectar a PostgreSQL hasta que esté disponible
@@ -67,22 +67,34 @@ class DNSResolverService(dns_pb2_grpc.DNSResolverServicer):
         if not ip:
             print(f"Cache MISS for {domain}")
             ip = resolve_dns(domain)  # Resuelve usando DIG
+            result = "MISS"
 
             if ip:  # Si la IP es válida, almacenarla
                 print(f"Cache HIT for {domain} on partition {partition_index}")
                 # Almacenar en el cliente de Redis correspondiente
                 redis_client.set(domain, ip)
-                # Registrar la consulta en PostgreSQL solo si hay una IP
-                cursor = self.db_conn.cursor()
-                cursor.execute("INSERT INTO dns_queries (domain, ip_address) VALUES (%s, %s)", (domain, ip))
-                self.db_conn.commit()
-                cursor.close()
-            else:
-                print(f"No se pudo resolver {domain}, no se almacenará en Redis ni en PostgreSQL.")
-        #else:
-            #print(f"Cache HIT for {domain} on partition {partition_index}")
+        else:
+            print(f"Cache HIT for {domain} on partition {partition_index}")
+            result = "HIT"
+        
+        # Registrar los datos del dominio en la tabla dns_domain_data
+        cursor = self.db_conn.cursor()
+        cursor.execute("""
+            INSERT INTO dns_domain_data (domain, ip_address, partition_number) 
+            VALUES (%s, %s, %s)
+        """, (domain, ip if ip else 'No IP found', partition_index))
+        
+        # Registrar si fue HIT o MISS en la tabla dns_hit_miss
+        cursor.execute("""
+            INSERT INTO dns_hit_miss (domain, partition_number, result)
+            VALUES (%s, %s, %s)
+        """, (domain, partition_index, result))
+        
+        self.db_conn.commit()
+        cursor.close()
 
         return dns_pb2.DNSResponse(ip=ip if ip else "No IP found")
+
 
 # Función para iniciar el servidor gRPC
 def serve():
