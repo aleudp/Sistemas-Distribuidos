@@ -1,0 +1,14 @@
+# Dockerfile.kafka-topic
+FROM python:3.10
+
+# Install Kafka dependencies for Python
+RUN pip install kafka-python
+
+# Copy the topic.py script into the container
+COPY topic.py /app/topic.py
+
+WORKDIR /app
+
+# Run the topic creation script
+CMD ["python", "topic.py"]
+

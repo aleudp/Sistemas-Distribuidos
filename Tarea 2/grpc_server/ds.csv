@@ -1,0 +1,241 @@
+Product Name,Unit Price,ID,Payment Gateway,Card Brand,Bank,Region,Address,Email
+iPhone 14 Pro,999.99,1,Kiphu,AMEX,Santander,Región de Los Ríos,Villarrica 444,eivibnp@example.com
+Dyson V11 Vacuum,499.99,2,EtPay,Mastercard,Banco BCI,Región del Biobío,Paseo Ahumada 890,dckrfrv@example.com
+Levi's 501 Jeans,69.99,3,Kiphu,VISA,Santander,Región de Los Lagos,Paseo Ahumada 890,rlvjkgf@random.org
+The Da Vinci Code,15.99,4,Kiphu,AMEX,Banco Estado,Región de Coquimbo,Puerto Varas 333,zncxltz@mail.com
+Neutrogena Skincare Set,89.99,5,MercadoPago,VISA,Banco de Chile,Región del Maule,Camino del Inca 1010,kehsvfl@test.com
+Wilson Evolution Basketball,29.99,6,MercadoPago,AMEX,Banco BCI,Región Metropolitana de Santiago,Providencia 234,opkzwsx@mail.com
+MacBook Pro 16-inch,2499.99,7,Kiphu,VISA,Banco de Chile,Región de Valparaíso,Gran Avenida 567,lqfcxcj@random.org
+Blueair Classic 480i,599.99,8,MercadoPago,VISA,Banco BCI,Región de Magallanes y de la Antártica Chilena,La Serena 666,afghyak@random.org
+Nike Air Force 1,89.99,9,EtPay,VISA,Banco de Chile,Región de Arica y Parinacota,Puerto Varas 333,vidsqcz@random.org
+Dune by Frank Herbert,25.99,10,Kiphu,VISA,Banco Estado,Región Metropolitana de Santiago,Paseo Ahumada 890,agwocfg@mail.com
+Chanel No. 5 Perfume,129.99,11,EtPay,VISA,Banco Estado,Región de Aysén del General Carlos Ibáñez del Campo,Calle Falsa 123,xmrskli@mail.com
+Babolat Pure Drive Tennis Racket,199.99,12,MercadoPago,Mastercard,Banco Falabella,Región de Magallanes y de la Antártica Chilena,Los Alerces 456,qumtdko@random.org
+Samsung Galaxy Tab S8,749.99,13,Webpay,VISA,Banco BCI,Región de Magallanes y de la Antártica Chilena,Puerto Varas 333,ojiroow@random.org
+Keurig K-Elite Coffee Maker,189.99,14,Webpay,VISA,Banco de Chile,Región de Los Ríos,Calle Falsa 123,bgwzobf@example.com
+North Face Down Jacket,249.99,15,EtPay,Mastercard,Santander,Región del Biobío,Los Alerces 456,nfdljmz@random.org
+"Salt, Fat, Acid, Heat by Samin Nosrat",35.99,16,Kiphu,Mastercard,Banco Falabella,Región de Magallanes y de la Antártica Chilena,Av. O'Higgins 678,btvxisd@mail.com
+Dyson Supersonic Hair Dryer,399.99,17,Kiphu,AMEX,Banco Falabella,Región de Aysén del General Carlos Ibáñez del Campo,Cerro Alegre 222,qkraqhp@mail.com
+Manduka PRO Yoga Mat,119.99,18,Webpay,AMEX,Banco Estado,Región Metropolitana de Santiago,Cerro Alegre 222,rsucdvt@random.org
+Garmin Forerunner 945,499.99,19,Webpay,AMEX,Banco de Chile,Región de Valparaíso,Providencia 234,ympfihb@email.com
+Ninja Professional Blender,99.99,20,Webpay,VISA,Banco Estado,Región de La Araucanía,Gran Avenida 567,gijbdcn@test.com
+Zara Summer Dress,59.99,21,Webpay,VISA,Banco BCI,Región de La Araucanía,Av. Siempre Viva 742,cpnngdt@example.com
+Gone Girl by Gillian Flynn,22.99,22,EtPay,VISA,Banco Falabella,Región de Antofagasta,La Serena 666,ztmdjjd@random.org
+Olay Regenerist Face Cream,49.99,23,Kiphu,Mastercard,Banco Estado,Región de Tarapacá,Puerto Varas 333,esojcwu@mail.com
+Adidas FIFA World Cup Football,29.99,24,EtPay,Mastercard,Santander,Región del Biobío,Providencia 234,esfolgw@mail.com
+Bose QuietComfort 35 Headphones,299.99,25,Webpay,Mastercard,Banco Estado,Región de Aysén del General Carlos Ibáñez del Campo,Villarrica 444,kccznpi@mail.com
+Panasonic NN-SN966S Microwave,179.99,26,MercadoPago,AMEX,Santander,Región de Tarapacá,La Serena 666,vhjrkbw@email.com
+Adidas Ultraboost Shoes,179.99,27,Kiphu,AMEX,Santander,Región del Libertador General Bernardo O'Higgins,Cerro Alegre 222,oxvrmtw@random.org
+Pride and Prejudice by Jane Austen,12.99,28,EtPay,AMEX,Banco Falabella,Región del Biobío,Plaza Italia 111,sjdapir@mail.com
+MAC Ruby Woo Lipstick,29.99,29,Webpay,VISA,Banco de Chile,Región de Tarapacá,La Florida 789,gekorkb@email.com
+Nike Air Zoom Pegasus 37,129.99,30,EtPay,VISA,Banco Falabella,Región del Biobío,Providencia 234,azthezs@example.com
+Sony WH-1000XM4 Headphones,349.99,31,EtPay,VISA,Banco BCI,Región Metropolitana de Santiago,La Serena 666,nqsrdao@mail.com
+Instant Pot Duo,89.99,32,Kiphu,Mastercard,Banco de Chile,Región del Maule,Cerro Alegre 222,ociaqnj@fake.co
+Under Armour HeatGear T-Shirt,29.99,33,Kiphu,AMEX,Banco Falabella,Región de Atacama,Paseo Ahumada 890,jfyyuch@test.com
+1984 by George Orwell,19.99,34,EtPay,Mastercard,Banco Falabella,Región de Valparaíso,Camino del Inca 1010,chnunvy@example.com
+L'Oreal Revitalift Serum,39.99,35,Webpay,VISA,Banco BCI,Región de Antofagasta,Camino del Inca 1010,hmnjzjz@fake.co
+Peloton Bike,1895.0,36,Webpay,VISA,Banco BCI,Región del Biobío,Puerto Varas 333,pyebelt@example.com
+Apple Watch Series 8,399.99,37,MercadoPago,VISA,Banco BCI,Región del Maule,Camino del Inca 1010,vtgitpy@fake.co
+Roomba i7+,799.99,38,MercadoPago,VISA,Banco BCI,Región del Biobío,Valdivia 555,rrmcivt@email.com
+Columbia Fleece Jacket,59.99,39,MercadoPago,VISA,Banco de Chile,Región de Coquimbo,Av. Siempre Viva 742,dzqfycd@test.com
+Harry Potter and the Sorcerer's Stone,24.99,40,Kiphu,AMEX,Santander,Región de Antofagasta,Puerto Varas 333,nkijebk@random.org
+Estee Lauder Advanced Night Repair,105.0,41,Webpay,Mastercard,Banco Falabella,Región de Magallanes y de la Antártica Chilena,Av. Siempre Viva 742,ocezruc@test.com
+Fitbit Charge 5,129.99,42,Kiphu,AMEX,Santander,Región del Biobío,Los Alerces 456,uxpicfg@random.org
+GoPro HERO10 Black,399.99,43,MercadoPago,AMEX,Banco Falabella,Región del Biobío,Calle Falsa 123,vcycbnx@email.com
+Nespresso VertuoPlus,199.99,44,Kiphu,VISA,Santander,Región del Libertador General Bernardo O'Higgins,Paseo Ahumada 890,wfplgul@fake.co
+Patagonia Better Sweater,139.99,45,Webpay,Mastercard,Banco BCI,Región de Arica y Parinacota,Providencia 234,ipwcygt@example.com
+Becoming by Michelle Obama,32.5,46,MercadoPago,VISA,Banco Estado,Región de Los Lagos,Valdivia 555,tzwyovb@example.com
+Clinique Moisture Surge,52.0,47,MercadoPago,VISA,Santander,Región de Ñuble,Providencia 234,skqywit@test.com
+Yeti Rambler Tumbler,39.99,48,MercadoPago,Mastercard,Banco Falabella,Región de Coquimbo,Villarrica 444,argftcw@test.com
+Kindle Paperwhite,129.99,49,MercadoPago,VISA,Banco de Chile,Región de Ñuble,Providencia 234,dtmjwjk@email.com
+Breville Smart Oven,299.99,50,EtPay,AMEX,Banco BCI,Región de Ñuble,Valdivia 555,scbgflz@email.com
+Ray-Ban Aviator Sunglasses,154.99,51,EtPay,AMEX,Banco Falabella,Región de La Araucanía,Plaza Italia 111,qrjpzuf@mail.com
+The Silent Patient by Alex Michaelides,26.99,52,Webpay,Mastercard,Santander,Región de Los Ríos,Valdivia 555,lpzavwi@email.com
+Shiseido Ultimate Sun Protector,49.0,53,Kiphu,AMEX,Banco BCI,Región de Antofagasta,La Serena 666,qxnpfgt@example.com
+Titleist Pro V1 Golf Balls,49.99,54,MercadoPago,VISA,Banco de Chile,Región del Maule,Gran Avenida 567,rbcfwxq@example.com
+Anker PowerCore Portable Charger,59.99,55,EtPay,Mastercard,Banco Falabella,Región del Libertador General Bernardo O'Higgins,Paseo Ahumada 890,zjmehws@test.com
+KitchenAid Artisan Stand Mixer,499.99,56,Kiphu,VISA,Banco Estado,Región de Ñuble,La Florida 789,smnetlk@mail.com
+Calvin Klein Boxer Briefs,29.99,57,MercadoPago,Mastercard,Santander,Región de Aysén del General Carlos Ibáñez del Campo,Villarrica 444,dozldfq@random.org
+Educated by Tara Westover,28.0,58,MercadoPago,VISA,Banco BCI,Región de La Araucanía,Puerto Varas 333,iszikkj@example.com
+Anastasia Beverly Hills Brow Wiz,23.0,59,MercadoPago,Mastercard,Banco BCI,Región de Arica y Parinacota,Plaza Italia 111,puofcjd@mail.com
+Hyperice Hypervolt Massager,349.0,60,Webpay,AMEX,Santander,Región de Los Ríos,La Serena 666,eiakwqw@example.com
+Nintendo Switch,299.99,61,MercadoPago,VISA,Banco de Chile,Región de Aysén del General Carlos Ibáñez del Campo,Av. O'Higgins 678,fkwmgft@random.org
+Philips Airfryer XXL,199.99,62,EtPay,Mastercard,Banco BCI,Región de Aysén del General Carlos Ibáñez del Campo,Los Alerces 456,xccyidu@email.com
+Hanes ComfortSoft T-Shirt,9.99,63,Kiphu,VISA,Banco de Chile,Región del Biobío,La Serena 666,eegiqhc@mail.com
+Where the Crawdads Sing by Delia Owens,18.99,64,MercadoPago,AMEX,Banco de Chile,Región de Coquimbo,Av. O'Higgins 678,lglczlt@example.com
+Lancome La Vie Est Belle,102.0,65,Webpay,VISA,Banco Estado,Región de Los Ríos,Av. O'Higgins 678,pwyaaqr@fake.co
+Garmin Edge 530,299.99,66,Webpay,AMEX,Banco de Chile,Región de Magallanes y de la Antártica Chilena,La Serena 666,aqaisrg@random.org
+Samsung QLED 4K TV,1199.99,67,EtPay,VISA,Banco Falabella,Región de Los Ríos,La Serena 666,nddktbi@email.com
+Eufy RoboVac 11S,219.99,68,Webpay,Mastercard,Banco de Chile,Región de Magallanes y de la Antártica Chilena,La Florida 789,odxqdij@example.com
+Puma Suede Classic Sneakers,59.99,69,MercadoPago,VISA,Banco BCI,Región de Los Ríos,Puerto Varas 333,dszukkz@fake.co
+The Great Gatsby by F. Scott Fitzgerald,10.99,70,EtPay,VISA,Santander,Región Metropolitana de Santiago,Villarrica 444,gcsvvkl@fake.co
+Drunk Elephant C-Firma Day Serum,78.0,71,Webpay,AMEX,Santander,Región de Aysén del General Carlos Ibáñez del Campo,Plaza Italia 111,cpaabdp@test.com
+Nike Metcon 6,129.99,72,Webpay,Mastercard,Santander,Región del Biobío,Calle Falsa 123,equemxm@example.com
+HP Spectre x360 Laptop,1599.99,73,Kiphu,AMEX,Santander,Región de Ñuble,La Serena 666,vhuyqkh@fake.co
+De'Longhi Magnifica Espresso Machine,899.99,74,MercadoPago,VISA,Banco de Chile,Región de Tarapacá,Camino del Inca 1010,olaemjo@test.com
+Tommy Hilfiger Polo Shirt,49.99,75,MercadoPago,AMEX,Banco de Chile,Región de Arica y Parinacota,Av. O'Higgins 678,ezaggmf@random.org
+To Kill a Mockingbird by Harper Lee,14.99,76,Webpay,VISA,Banco de Chile,Región de Los Lagos,Villarrica 444,chmraxy@mail.com
+Glossier Boy Brow,16.0,77,MercadoPago,VISA,Banco de Chile,Región del Maule,Cerro Alegre 222,mprdmvp@fake.co
+Rogue Fitness Kettlebell,69.99,78,EtPay,Mastercard,Banco Falabella,Región de Atacama,Calle Falsa 123,kxynjxl@example.com
+Apple AirPods Pro,249.99,79,EtPay,AMEX,Banco de Chile,Región del Maule,Av. Siempre Viva 742,pqahgzx@email.com
+Dyson Pure Cool Link,499.99,80,Kiphu,Mastercard,Banco Falabella,Región de Valparaíso,Puerto Varas 333,dvqgclg@test.com
+Levi's Trucker Jacket,89.99,81,Kiphu,Mastercard,Banco de Chile,Región de Coquimbo,Puerto Varas 333,dcbbclq@random.org
+The Hobbit by J.R.R. Tolkien,12.99,82,Webpay,Mastercard,Banco Estado,Región Metropolitana de Santiago,Valdivia 555,tpejckc@example.com
+Charlotte Tilbury Magic Cream,100.0,83,EtPay,VISA,Banco BCI,Región de Valparaíso,Plaza Italia 111,daqlrtr@example.com
+Spalding NBA Street Basketball,24.99,84,Webpay,AMEX,Santander,Región de Los Lagos,Av. O'Higgins 678,zslhmmw@fake.co
+Ring Video Doorbell,99.99,85,Webpay,Mastercard,Banco de Chile,Región Metropolitana de Santiago,Plaza Italia 111,qvljubd@test.com
+LG OLED TV,1299.99,86,EtPay,AMEX,Banco Falabella,Región del Libertador General Bernardo O'Higgins,Los Alerces 456,ecdvzee@fake.co
+Uniqlo Ultra Light Down Jacket,79.99,87,EtPay,VISA,Banco BCI,Región del Maule,Gran Avenida 567,mylcyvn@email.com
+The Catcher in the Rye by J.D. Salinger,13.99,88,EtPay,AMEX,Banco Falabella,Región de La Araucanía,Valdivia 555,roepfez@fake.co
+Sunday Riley Good Genes,105.0,89,EtPay,AMEX,Banco de Chile,Región de La Araucanía,Los Alerces 456,qnljyso@example.com
+On Running Cloud Shoes,129.99,90,Kiphu,VISA,Banco BCI,Región de Valparaíso,Los Alerces 456,mjyheog@fake.co
+Logitech MX Master 3 Mouse,99.99,91,MercadoPago,Mastercard,Banco Falabella,Región del Maule,Puerto Varas 333,peyoral@example.com
+Instant Pot Duo Crisp,179.99,92,MercadoPago,AMEX,Banco de Chile,Región Metropolitana de Santiago,La Serena 666,tlfbswr@example.com
+Adidas Originals Superstar Sneakers,79.99,93,Webpay,VISA,Banco de Chile,Región del Biobío,Calle Falsa 123,xaucxjc@random.org
+The Alchemist by Paulo Coelho,14.99,94,MercadoPago,Mastercard,Banco de Chile,Región Metropolitana de Santiago,Camino del Inca 1010,mprxjjb@email.com
+Tatcha The Water Cream,68.0,95,MercadoPago,Mastercard,Banco BCI,Región del Biobío,Plaza Italia 111,grcnhqk@example.com
+Garmin Fenix 6X Pro,999.99,96,Kiphu,AMEX,Banco Estado,Región del Libertador General Bernardo O'Higgins,La Serena 666,dofetpc@random.org
+Bose SoundLink Revolve+ Speaker,299.99,97,Webpay,Mastercard,Banco de Chile,Región del Libertador General Bernardo O'Higgins,Paseo Ahumada 890,rkhjjeb@test.com
+Vitamix Explorian Blender,349.99,98,Webpay,VISA,Banco Falabella,Región de Antofagasta,Paseo Ahumada 890,hgoyscq@test.com
+Gap Essential Crewneck T-Shirt,19.99,99,EtPay,AMEX,Banco de Chile,Región de Aysén del General Carlos Ibáñez del Campo,Paseo Ahumada 890,ocdwblv@fake.co
+The Power of Now by Eckhart Tolle,12.99,100,Webpay,VISA,Banco de Chile,Región del Maule,Puerto Varas 333,ggblpou@mail.com
+Kiehl's Midnight Recovery Concentrate,82.0,101,Webpay,AMEX,Banco de Chile,Región de Los Ríos,Providencia 234,rqempvh@example.com
+Under Armour HOVR Sonic 4 Shoes,109.99,102,MercadoPago,Mastercard,Banco de Chile,Región de Ñuble,Calle Falsa 123,kylypjp@fake.co
+Canon EOS R5 Camera,3899.99,103,Kiphu,Mastercard,Banco Falabella,Región de Tarapacá,Villarrica 444,ioqhivz@mail.com
+Shark IQ Robot Vacuum,349.99,104,MercadoPago,AMEX,Santander,Región Metropolitana de Santiago,Paseo Ahumada 890,zzgiwdm@example.com
+H&M Slim Fit Jeans,39.99,105,Kiphu,AMEX,Banco BCI,Región de Coquimbo,Gran Avenida 567,awlqesi@email.com
+The Girl on the Train by Paula Hawkins,10.99,106,EtPay,VISA,Banco Estado,Región del Maule,Valdivia 555,fvjhtbh@email.com
+The Ordinary Niacinamide Serum,6.5,107,Kiphu,VISA,Banco BCI,Región de Aysén del General Carlos Ibáñez del Campo,Puerto Varas 333,kjalawd@email.com
+Bowflex SelectTech 552 Dumbbells,399.99,108,Webpay,AMEX,Banco BCI,Región de Aysén del General Carlos Ibáñez del Campo,Los Alerces 456,akdsawh@test.com
+Google Nest Hub Max,229.99,109,MercadoPago,VISA,Banco de Chile,Región de Los Ríos,Cerro Alegre 222,yjsfwdq@example.com
+Cuisinart Griddler Deluxe,159.99,110,Kiphu,Mastercard,Banco BCI,Región de Los Lagos,Cerro Alegre 222,lvwcmsw@fake.co
+Old Navy Relaxed-Fit T-Shirt,14.99,111,Kiphu,VISA,Banco Falabella,Región de Coquimbo,Av. Siempre Viva 742,lsmrkde@email.com
+Sapiens: A Brief History of Humankind by Yuval Noah Harari,18.99,112,EtPay,VISA,Banco Falabella,Región de Antofagasta,La Serena 666,edflsjj@test.com
+Biore UV Aqua Rich Watery Essence Sunscreen,15.0,113,Webpay,Mastercard,Banco Estado,Región del Libertador General Bernardo O'Higgins,La Florida 789,lzovodv@email.com
+Fitbit Versa 3,229.95,114,Kiphu,Mastercard,Banco BCI,Región de Antofagasta,Cerro Alegre 222,cqhuivc@example.com
+Amazon Echo Show 10,249.99,115,Webpay,VISA,Banco Estado,Región del Biobío,Av. O'Higgins 678,quyefcj@random.org
+Breville Smart Grill,299.95,116,Webpay,VISA,Banco Falabella,Región del Maule,Los Alerces 456,fkdokki@random.org
+Gap High Rise Skinny Jeans,49.99,117,MercadoPago,AMEX,Banco Falabella,Región de Los Ríos,La Florida 789,cvokczo@fake.co
+Atomic Habits by James Clear,16.99,118,EtPay,AMEX,Banco Falabella,Región de Ñuble,Av. O'Higgins 678,jwaakje@mail.com
+CeraVe Hydrating Facial Cleanser,14.99,119,Webpay,VISA,Banco BCI,Región de Atacama,Cerro Alegre 222,upjnzua@mail.com
+YETI Hopper Flip Portable Cooler,249.99,120,Webpay,AMEX,Banco de Chile,Región de Antofagasta,Calle Falsa 123,mecoqnd@email.com
+Apple iPad Air,599.99,121,MercadoPago,Mastercard,Banco BCI,Región de Magallanes y de la Antártica Chilena,Villarrica 444,kucfvtd@random.org
+Hamilton Beach FlexBrew Coffee Maker,89.99,122,Kiphu,VISA,Banco BCI,Región de Antofagasta,Providencia 234,digjmsx@test.com
+Forever 21 Graphic Tee,12.99,123,EtPay,AMEX,Banco Estado,Región Metropolitana de Santiago,Paseo Ahumada 890,jjibjye@mail.com
+The Subtle Art of Not Giving a F*ck by Mark Manson,14.99,124,EtPay,Mastercard,Banco de Chile,Región Metropolitana de Santiago,Paseo Ahumada 890,byenhhw@test.com
+NARS Radiant Creamy Concealer,30.0,125,EtPay,VISA,Banco Estado,Región de Aysén del General Carlos Ibáñez del Campo,Paseo Ahumada 890,nmlmmhu@mail.com
+Yeti Roadie 24 Cooler,199.99,126,Webpay,Mastercard,Santander,Región Metropolitana de Santiago,Puerto Varas 333,osmwhgs@test.com
+Sony PlayStation 5,499.99,127,Kiphu,VISA,Banco de Chile,Región del Biobío,Av. O'Higgins 678,zhesbrw@random.org
+Dyson Supersonic Hair Dryer,399.99,128,EtPay,AMEX,Santander,Región de Tarapacá,La Serena 666,tffnxtn@example.com
+Lululemon Align Leggings,98.0,129,EtPay,Mastercard,Banco Falabella,Región de La Araucanía,Villarrica 444,acqkaek@fake.co
+The Four Agreements by Don Miguel Ruiz,8.99,130,Kiphu,AMEX,Banco de Chile,Región Metropolitana de Santiago,Camino del Inca 1010,qwjocye@fake.co
+Fenty Beauty Killawatt Highlighter,36.0,131,EtPay,Mastercard,Banco Estado,Región de La Araucanía,Valdivia 555,ssoxewy@random.org
+Hydro Flask Wide Mouth Water Bottle,39.95,132,Kiphu,Mastercard,Banco de Chile,Región Metropolitana de Santiago,Camino del Inca 1010,dcwhnck@fake.co
+Microsoft Surface Laptop 4,1299.99,133,Kiphu,Mastercard,Banco Estado,Región del Maule,Cerro Alegre 222,crekniv@random.org
+Keurig K-Mini Coffee Maker,79.99,134,MercadoPago,AMEX,Banco de Chile,Región del Maule,Valdivia 555,gxuftat@test.com
+Gap Crewneck Sweatshirt,34.99,135,MercadoPago,AMEX,Banco Falabella,Región de Ñuble,Cerro Alegre 222,lrycqtk@random.org
+Think and Grow Rich by Napoleon Hill,9.99,136,Kiphu,AMEX,Santander,Región del Biobío,La Florida 789,vohvtwk@random.org
+The Ordinary Hyaluronic Acid Serum,6.8,137,Kiphu,VISA,Banco BCI,Región de Aysén del General Carlos Ibáñez del Campo,Gran Avenida 567,moucage@example.com
+Fitbit Inspire 2,99.95,138,EtPay,Mastercard,Banco BCI,Región de Magallanes y de la Antártica Chilena,La Florida 789,djukyrd@email.com
+Samsung Odyssey G9 Gaming Monitor,1499.99,139,MercadoPago,AMEX,Banco BCI,Región de Ñuble,Puerto Varas 333,whsfiyd@test.com
+Instant Pot Ultra,139.99,140,Kiphu,VISA,Banco BCI,Región de Los Ríos,Providencia 234,octwanz@mail.com
+Adidas Essential Track Pants,44.99,141,Webpay,AMEX,Banco Falabella,Región de Antofagasta,Paseo Ahumada 890,ydyjfjf@fake.co
+The Power of Habit by Charles Duhigg,11.99,142,MercadoPago,Mastercard,Banco Falabella,Región de Los Ríos,Plaza Italia 111,ucpevgy@email.com
+Clinique Dramatically Different Moisturizing Lotion,29.5,143,EtPay,VISA,Banco de Chile,Región de Los Ríos,Plaza Italia 111,nyvmxeb@example.com
+YETI Tundra 45 Cooler,299.99,144,Webpay,VISA,Banco BCI,Región de Los Ríos,Calle Falsa 123,nsnkhth@mail.com
+Apple AirPods Max,549.0,145,EtPay,AMEX,Banco Falabella,Región de Antofagasta,Av. Siempre Viva 742,jcwvtmz@mail.com
+Cuisinart Coffee Center,199.95,146,Kiphu,Mastercard,Banco Falabella,Región de Ñuble,Los Alerces 456,pgirciz@test.com
+Levi's Sherpa Trucker Jacket,98.0,147,EtPay,Mastercard,Banco Estado,Región de Antofagasta,Los Alerces 456,uovtlpj@mail.com
+The Outsiders by S.E. Hinton,10.99,148,EtPay,AMEX,Banco Estado,Región de Coquimbo,La Florida 789,ddlikvo@test.com
+Laneige Water Sleeping Mask,25.0,149,EtPay,AMEX,Banco Falabella,Región de La Araucanía,Paseo Ahumada 890,agisqzl@fake.co
+Bose SoundSport Wireless Earbuds,149.99,150,EtPay,VISA,Santander,Región del Maule,Cerro Alegre 222,bffewth@test.com
+Sony WH-1000XM4 Headphones,349.99,151,MercadoPago,Mastercard,Banco Estado,Región de Atacama,Valdivia 555,ivxnoit@fake.co
+Ninja Foodi Pressure Cooker,199.99,152,Kiphu,VISA,Banco BCI,Región de Ñuble,Puerto Varas 333,hlndspz@fake.co
+Nike Sportswear Club Fleece Hoodie,54.99,153,EtPay,Mastercard,Banco BCI,Región de Los Lagos,Villarrica 444,odkrxik@test.com
+The Night Circus by Erin Morgenstern,16.99,154,MercadoPago,VISA,Banco BCI,Región de Antofagasta,La Florida 789,bngkhew@test.com
+GlamGlow Supermud Clearing Treatment,59.0,155,EtPay,VISA,Banco BCI,Región de Atacama,Plaza Italia 111,rwdobdo@mail.com
+Garmin Forerunner 245,299.99,156,Webpay,AMEX,Banco Estado,Región del Maule,Av. O'Higgins 678,vxmxpzn@random.org
+Google Pixel 6 Pro,899.99,157,Kiphu,Mastercard,Banco de Chile,Región de Magallanes y de la Antártica Chilena,Camino del Inca 1010,wbahejn@random.org
+Breville Nespresso Creatista Plus,499.95,158,Webpay,Mastercard,Banco Estado,Región del Biobío,La Serena 666,cxdibnx@test.com
+Under Armour Tech 2.0 T-Shirt,24.99,159,MercadoPago,Mastercard,Banco de Chile,Región de Arica y Parinacota,Los Alerces 456,iczhnnc@email.com
+The Art of War by Sun Tzu,7.99,160,Webpay,Mastercard,Banco BCI,Región de Valparaíso,Providencia 234,felsnac@example.com
+Youth to the People Superfood Antioxidant Cleanser,36.0,161,Kiphu,AMEX,Banco Falabella,Región del Maule,Villarrica 444,qgrfhep@fake.co
+TriggerPoint GRID Foam Roller,34.99,162,Kiphu,AMEX,Banco de Chile,Región de Arica y Parinacota,Los Alerces 456,hhuupqq@random.org
+Apple MacBook Air,1199.99,163,Kiphu,AMEX,Banco BCI,Región del Maule,La Serena 666,cqjjibv@random.org
+Cuisinart Custom 14-Cup Food Processor,199.99,164,EtPay,Mastercard,Banco BCI,Región de Magallanes y de la Antártica Chilena,Plaza Italia 111,olqmtgy@mail.com
+Adidas 3-Stripes Shorts,29.99,165,MercadoPago,VISA,Santander,Región de Antofagasta,Cerro Alegre 222,iolbpco@random.org
+The Hunger Games by Suzanne Collins,8.99,166,Kiphu,VISA,Banco de Chile,Región del Maule,Puerto Varas 333,lysgmeq@email.com
+Neutrogena Hydro Boost Water Gel,16.99,167,Kiphu,AMEX,Santander,Región de La Araucanía,Av. O'Higgins 678,ppuqolm@example.com
+Yeti Rambler Bottle,49.99,168,MercadoPago,Mastercard,Banco Estado,Región de Ñuble,La Florida 789,ldxtdbr@random.org
+Samsung Odyssey G7 Gaming Monitor,699.99,169,Kiphu,AMEX,Banco de Chile,Región de Magallanes y de la Antártica Chilena,Camino del Inca 1010,oidciri@example.com
+Instant Pot Duo Evo Plus,139.99,170,Kiphu,Mastercard,Santander,Región de Magallanes y de la Antártica Chilena,Valdivia 555,bsknyrx@random.org
+Nike Tempo Running Shorts,34.99,171,Webpay,VISA,Banco BCI,Región de Aysén del General Carlos Ibáñez del Campo,Av. O'Higgins 678,cxmwiyu@example.com
+The Girl with the Dragon Tattoo by Stieg Larsson,9.99,172,EtPay,AMEX,Santander,Región del Libertador General Bernardo O'Higgins,Los Alerces 456,dcnhppd@fake.co
+Paula's Choice Skin Perfecting 2% BHA Liquid Exfoliant,29.5,173,Webpay,Mastercard,Banco de Chile,Región de Valparaíso,Calle Falsa 123,spyvtqh@test.com
+Bowflex SelectTech 1090 Adjustable Dumbbells,699.99,174,EtPay,VISA,Banco de Chile,Región de Magallanes y de la Antártica Chilena,Av. Siempre Viva 742,zwkuhat@mail.com
+Amazon Fire TV Stick 4K,49.99,175,EtPay,Mastercard,Banco Estado,Región de Arica y Parinacota,Gran Avenida 567,vfjmipx@email.com
+Crock-Pot 6-Quart Slow Cooker,49.99,176,EtPay,Mastercard,Santander,Región de Magallanes y de la Antártica Chilena,Los Alerces 456,rlqxmmp@example.com
+Uniqlo Airism Mesh Boxer Briefs,14.9,177,EtPay,VISA,Banco BCI,Región del Biobío,Calle Falsa 123,chuuuza@test.com
+The Sun Also Rises by Ernest Hemingway,11.99,178,Kiphu,Mastercard,Banco Estado,Región de Los Lagos,Cerro Alegre 222,rwzfskt@test.com
+First Aid Beauty Ultra Repair Cream,34.0,179,Kiphu,VISA,Banco Estado,Región de Magallanes y de la Antártica Chilena,Camino del Inca 1010,eoicxvd@example.com
+Oakley Holbrook Sunglasses,146.0,180,EtPay,Mastercard,Banco Falabella,Región de Los Lagos,Los Alerces 456,kmqtfkf@test.com
+Google Pixelbook Go,649.99,181,Kiphu,Mastercard,Banco Estado,Región de Valparaíso,Valdivia 555,avwufmu@mail.com
+Dyson V8 Absolute,399.99,182,Kiphu,VISA,Banco Falabella,Región de Atacama,Av. Siempre Viva 742,hstlvfa@email.com
+Levi's 511 Slim Fit Jeans,59.99,183,MercadoPago,VISA,Santander,Región de Antofagasta,Los Alerces 456,dmnokyl@fake.co
+The Martian by Andy Weir,12.99,184,Webpay,Mastercard,Santander,Región de Atacama,Providencia 234,pcyqyku@test.com
+La Mer Crème de la Mer Moisturizer,190.0,185,EtPay,Mastercard,Santander,Región del Maule,Calle Falsa 123,qndtmhg@mail.com
+Polar Vantage V2,499.95,186,EtPay,Mastercard,Banco Falabella,Región de Coquimbo,Valdivia 555,jagykfy@test.com
+Sonos Beam Soundbar,399.0,187,Webpay,VISA,Banco Falabella,Región Metropolitana de Santiago,Plaza Italia 111,ntygepd@random.org
+Anova Precision Cooker,199.0,188,Webpay,AMEX,Banco Estado,Región del Maule,Camino del Inca 1010,frhcgeq@mail.com
+Nike Dri-FIT Training Shorts,34.99,189,Kiphu,VISA,Banco Estado,Región de Arica y Parinacota,Valdivia 555,tmvkkbf@example.com
+The Catcher in the Rye by J.D. Salinger,10.99,190,MercadoPago,VISA,Santander,Región de La Araucanía,Calle Falsa 123,mnucizu@example.com
+Glossier Cloud Paint,18.0,191,MercadoPago,Mastercard,Santander,Región de Magallanes y de la Antártica Chilena,Paseo Ahumada 890,dhblpao@email.com
+TRX All-in-One Suspension Training System,169.95,192,Kiphu,VISA,Banco Estado,Región del Biobío,Paseo Ahumada 890,zfjqqrn@mail.com
+Logitech G Pro X Wireless Gaming Headset,199.99,193,EtPay,AMEX,Banco de Chile,Región de Atacama,Los Alerces 456,sfsvgdm@fake.co
+Breville Smart Coffee Grinder Pro,199.95,194,MercadoPago,VISA,Banco BCI,Región Metropolitana de Santiago,Villarrica 444,qweztuj@mail.com
+Adidas Ultraboost Running Shoes,179.99,195,MercadoPago,VISA,Banco de Chile,Región de La Araucanía,Av. O'Higgins 678,omkppaf@example.com
+The Road by Cormac McCarthy,11.99,196,EtPay,VISA,Santander,Región de Los Ríos,Plaza Italia 111,cithnfj@fake.co
+Tom Ford Black Orchid Perfume,125.0,197,EtPay,Mastercard,Santander,Región de Aysén del General Carlos Ibáñez del Campo,Valdivia 555,rqreqws@example.com
+GoPro HERO9 Black,449.99,198,EtPay,AMEX,Banco Estado,Región de Los Lagos,La Serena 666,bcdedke@random.org
+Apple TV 4K,179.0,199,EtPay,AMEX,Banco BCI,Región de Coquimbo,Av. O'Higgins 678,iqzfyic@fake.co
+Instant Pot Duo Nova,99.95,200,Kiphu,VISA,Banco Falabella,Región de La Araucanía,Camino del Inca 1010,tccwbop@fake.co
+Gap 1969 Original Fit Jeans,59.99,201,Webpay,AMEX,Banco Falabella,Región de Los Lagos,Puerto Varas 333,iswvotp@fake.co
+The Goldfinch by Donna Tartt,14.99,202,Webpay,Mastercard,Banco de Chile,Región del Maule,La Florida 789,ujdieya@test.com
+Dr. Jart+ Cicapair Tiger Grass Color Correcting Treatment,52.0,203,EtPay,VISA,Banco BCI,Región de Tarapacá,Villarrica 444,rebjwke@test.com
+Yeti Tundra Haul Portable Wheeled Cooler,399.99,204,Webpay,Mastercard,Banco Falabella,Región de Antofagasta,La Florida 789,hviafxd@example.com
+Samsung Galaxy Watch 4,299.99,205,Kiphu,Mastercard,Banco Estado,Región de Los Lagos,Valdivia 555,zhwefzt@email.com
+KitchenAid Stand Mixer,379.99,206,EtPay,Mastercard,Banco Estado,Región del Maule,Los Alerces 456,cydcrua@test.com
+Lululemon Wunder Under High-Rise Leggings,98.0,207,EtPay,AMEX,Banco de Chile,Región de Aysén del General Carlos Ibáñez del Campo,Av. Siempre Viva 742,anruruw@fake.co
+The Great Alone by Kristin Hannah,16.99,208,Webpay,AMEX,Banco Falabella,Región del Libertador General Bernardo O'Higgins,Plaza Italia 111,pveletb@test.com
+Caudalie Vinoperfect Radiance Serum,79.0,209,EtPay,Mastercard,Banco Falabella,Región de Tarapacá,Calle Falsa 123,wkadvkt@random.org
+Bose SoundLink Color Bluetooth Speaker II,129.0,210,Webpay,VISA,Banco Estado,Región Metropolitana de Santiago,Villarrica 444,kvuyfxv@example.com
+Canon EOS Rebel T7i DSLR Camera,749.99,211,MercadoPago,AMEX,Banco Falabella,Región de Los Lagos,Gran Avenida 567,cwwfucs@email.com
+Keurig K-Elite Coffee Maker,169.99,212,MercadoPago,AMEX,Banco Estado,Región de Atacama,Camino del Inca 1010,pdrswtd@test.com
+Uniqlo Airism Seamless Boxer Briefs,9.9,213,EtPay,AMEX,Banco Estado,Región del Maule,Providencia 234,rqtlamf@mail.com
+The Girl with the Dragon Tattoo by Stieg Larsson,10.99,214,Webpay,VISA,Banco BCI,Región de Antofagasta,La Florida 789,vqrfvth@random.org
+L'Occitane Shea Butter Hand Cream,29.0,215,Webpay,VISA,Santander,Región de Los Ríos,La Florida 789,fbwdbve@fake.co
+YETI Tundra 65 Cooler,349.99,216,Webpay,VISA,Banco Falabella,Región de Tarapacá,Paseo Ahumada 890,dkdrtek@email.com
+Apple MacBook Pro 16-inch,2399.0,217,MercadoPago,AMEX,Banco Falabella,Región de Aysén del General Carlos Ibáñez del Campo,La Florida 789,qjtvevk@email.com
+iRobot Braava Jet M6,449.99,218,Webpay,Mastercard,Banco Estado,Región de La Araucanía,Av. O'Higgins 678,xnvuehx@example.com
+Champion Reverse Weave Hoodie,49.99,219,Kiphu,AMEX,Santander,Región de Ñuble,Av. O'Higgins 678,hnfewwj@example.com
+The Nightingale by Kristin Hannah,12.99,220,MercadoPago,VISA,Santander,Región de Ñuble,Villarrica 444,hliaumk@example.com
+Tarte Shape Tape Concealer,27.0,221,Webpay,AMEX,Banco Falabella,Región de Coquimbo,Villarrica 444,zkhvldb@random.org
+Garmin Forerunner 945,599.99,222,Webpay,VISA,Santander,Región de Antofagasta,Av. O'Higgins 678,rjrehti@mail.com
+Amazon Echo Dot (4th Gen),49.99,223,Kiphu,AMEX,Banco Falabella,Región de Coquimbo,La Serena 666,vrrkpbl@email.com
+Philips Sonicare DiamondClean Toothbrush,229.99,224,Kiphu,AMEX,Santander,Región de Coquimbo,Valdivia 555,oacykvm@mail.com
+Old Navy Mid-Rise Rockstar Super Skinny Jeans,44.99,225,Kiphu,AMEX,Santander,Región de Atacama,Camino del Inca 1010,objihte@example.com
+The Silent Patient by Alex Michaelides,26.99,226,EtPay,VISA,Banco de Chile,Región de Arica y Parinacota,Villarrica 444,lysuwbh@random.org
+The Ordinary Caffeine Solution 5% + EGCG,6.7,227,Kiphu,Mastercard,Santander,Región del Libertador General Bernardo O'Higgins,Av. O'Higgins 678,lhcnuzv@random.org
+Fitbit Luxe,149.95,228,Kiphu,AMEX,Banco BCI,Región del Libertador General Bernardo O'Higgins,Av. Siempre Viva 742,ekwtbnh@test.com
+Google Nest Wifi Router,169.0,229,Kiphu,AMEX,Banco de Chile,Región de Ñuble,Av. Siempre Viva 742,hlqkoop@example.com
+Anova Precision Oven,599.0,230,Webpay,Mastercard,Banco Falabella,Región de Atacama,Av. O'Higgins 678,ypirlip@mail.com
+Adidas Originals Trefoil Hoodie,64.99,231,Webpay,VISA,Banco Falabella,Región de Antofagasta,Camino del Inca 1010,guraily@test.com
+Dune by Frank Herbert,9.99,232,Kiphu,VISA,Banco de Chile,Región de Tarapacá,Av. Siempre Viva 742,uefuzpn@mail.com
+Fresh Sugar Lip Treatment,24.0,233,MercadoPago,AMEX,Santander,Región de Antofagasta,Camino del Inca 1010,jsheygp@fake.co
+Hydro Flask Standard Mouth Water Bottle,32.95,234,Kiphu,VISA,Banco de Chile,Región de Los Lagos,Paseo Ahumada 890,twtgvii@test.com
+Bose QuietComfort 35 II Wireless Headphones,299.0,235,Webpay,VISA,Banco Estado,Región de Aysén del General Carlos Ibáñez del Campo,Camino del Inca 1010,xkivlex@example.com
+Nespresso Vertuo Next Coffee and Espresso Maker,159.99,236,Webpay,VISA,Banco Estado,Región de Aysén del General Carlos Ibáñez del Campo,Providencia 234,xqkyxdp@test.com
+Nike Air Force 1 Sneakers,90.0,237,Kiphu,VISA,Banco de Chile,Región de Atacama,La Serena 666,ffxzcnw@test.com
+The Handmaid's Tale by Margaret Atwood,10.99,238,MercadoPago,AMEX,Banco Falabella,Región de Los Ríos,Puerto Varas 333,gokfrbw@test.com
+Sunday Riley Luna Sleeping Night Oil,55.0,239,MercadoPago,VISA,Banco BCI,Región de Tarapacá,Villarrica 444,lxcstbl@fake.co
+Yeti Rambler 20 oz Tumbler,29.99,240,EtPay,Mastercard,Banco de Chile,Región Metropolitana de Santiago,Av. Siempre Viva 742,uzelmjq@test.com

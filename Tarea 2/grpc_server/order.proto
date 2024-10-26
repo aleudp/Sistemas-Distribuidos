@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package order;
+
+message OrderRequest {
+    int32 id = 1;
+    string product_name = 2;
+    double price = 3;
+    string payment_method = 4;
+    string card_brand = 5;
+    string bank = 6;
+    string region = 7;
+    string address = 8;
+    string email = 9;
+}
+
+message OrderResponse {
+    string status = 1;
+}
+
+service OrderService {
+    rpc PlaceOrder (OrderRequest) returns (OrderResponse);
+}
+
