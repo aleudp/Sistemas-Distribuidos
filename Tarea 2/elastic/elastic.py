@@ -1,49 +1,100 @@
-import json
-import time
-from datetime import datetime
 from kafka import KafkaConsumer
 from elasticsearch import Elasticsearch
+from datetime import datetime
+import json
+import threading
 
-# Kafka topics
-TOPICS = ['Procesando', 'Preparacion', 'Finalizado', 'Enviado', 'Entregado']
+# Initialize the Elasticsearch client
+es = Elasticsearch("http://elasticsearch:9200")
 
-# Elasticsearch setup
-es = Elasticsearch(['http://elasticsearch:9200'])
+def get_current_millis():
+    # Get the current time in epoch milliseconds
+    return int(datetime.utcnow().timestamp() * 1000)
 
-def create_consumer(topic):
-    """Create a Kafka consumer for the specified topic."""
-    return KafkaConsumer(
-        topic,
-        bootstrap_servers=['kafka1:9092', 'kafka2:9094', 'kafka3:9096'],
-        auto_offset_reset='earliest',
-        enable_auto_commit=True,
-        group_id=f'{topic}_group',
-        value_deserializer=lambda m: json.loads(m.decode('utf-8'))
+def consume_and_index(topic_name, doc):
+    # Get the current time in epoch milliseconds
+    current_time = get_current_millis()
+
+    # Check if the document already exists in Elasticsearch
+    if es.exists(index="products", id=doc["ID"]):
+        # Retrieve the existing document
+        existing_doc = es.get(index="products", id=doc["ID"])["_source"]
+    else:
+        # Initialize a new document if it doesn't exist
+        existing_doc = {
+            "product_name": doc["product_name"],
+            "price": doc["price"],
+            "ID": doc["ID"],
+            "payment_method": doc["payment_method"],
+            "card_brand": doc["card_brand"],
+            "bank": doc["bank"],
+            "region": doc["region"],
+            "address": doc["address"],
+            "email": doc["email"],
+            "start_time": current_time,  # Initial start time in epoch milliseconds
+            # Initialize topic-specific timestamps with entry_time in epoch milliseconds
+            "Procesando": {"entry_time": None},
+            "Preparacion": {"entry_time": None, "latency": None},
+            "Finalizado": {"entry_time": None, "latency": None},
+            "Enviado": {"entry_time": None, "latency": None},
+            "Entregado": {"entry_time": None, "latency": None}
+        }
+
+    # Access topic data for this document
+    topic_data = existing_doc[topic_name]
+
+    # Set entry time if this is the first time the document enters the topic
+    if topic_data["entry_time"] is None:
+        topic_data["entry_time"] = current_time
+
+        # Calculate latency for transitions by checking previous stage's entry_time
+        stages = ["Procesando", "Preparacion", "Finalizado", "Enviado", "Entregado"]
+        stage_index = stages.index(topic_name)
+        if stage_index > 0:
+            # Get the previous stage's entry_time
+            previous_stage = stages[stage_index - 1]
+            previous_entry_time = existing_doc[previous_stage]["entry_time"]
+            if previous_entry_time is not None:
+                # Calculate and store latency in milliseconds
+                topic_data["latency"] = current_time - previous_entry_time
+
+    # Index or update the document in Elasticsearch
+    response = es.index(index="products", id=doc["ID"], document=existing_doc)
+    print(f"Document indexed/updated for topic {topic_name}: {response}")
+
+def start_consumer(topic_name):
+    # Kafka brokers list for redundancy
+    kafka_brokers = ["kafka1:9092", "kafka2:9092", "kafka3:9092"]
+
+    # Set up Kafka consumer for the specified topic
+    consumer = KafkaConsumer(
+        topic_name,
+        bootstrap_servers=kafka_brokers,
+        group_id=f"consumer-{topic_name}",  # Unique group ID per topic
+        value_deserializer=lambda m: json.loads(m.decode("utf-8"))
     )
+    
+    print(f"Consumer started for topic: {topic_name}")
 
-def send_to_elasticsearch(topic, message):
-    """Send the message to Elasticsearch with added metadata."""
-    index_name = message['id']
-    timestamp = datetime.utcnow().isoformat()
-
-    # Adding metadata fields
-    message['timestamp'] = timestamp
-    message['topic'] = topic
-
-    # Index the document in Elasticsearch
-    es.index(index="messages", id=index_name, body=message)
-    print(f"Indexed message to Elasticsearch: {message}")
-
-def consume_topic(topic):
-    """Consume messages from a Kafka topic and send to Elasticsearch."""
-    consumer = create_consumer(topic)
-
+    # Continuously consume messages
     for message in consumer:
-        print(f"Consumed message from {topic}: {message.value}")
-        send_to_elasticsearch(topic, message.value)
+        doc = message.value
+        consume_and_index(topic_name, doc)
 
-if __name__ == '__main__':
-    # Start consuming each topic in separate threads
-    for topic in TOPICS:
-        consume_topic(topic)
+def start_consumer_group():
+    # Topics to be consumed
+    topics = ["Procesando", "Preparacion", "Finalizado", "Enviado", "Entregado"]
+    
+    # Start a separate thread for each topic consumer
+    for topic in topics:
+        thread = threading.Thread(target=start_consumer, args=(topic,))
+        thread.start()
+        print(f"Thread started for consumer on topic: {topic}")
 
+# Run the consumer group
+if __name__ == "__main__":
+    if es.ping():
+        print("Connected to Elasticsearch")
+        start_consumer_group()
+    else:
+        print("Could not connect to Elasticsearch.")

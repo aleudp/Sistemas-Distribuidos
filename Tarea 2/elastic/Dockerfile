@@ -1,18 +1,13 @@
-# Use an official Python image as the base
-FROM python:3.10-slim
+# Dockerfile.elastic
+FROM python:3.10
 
-# Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file to the container
+# Install Python dependencies
 COPY requirements.txt .
-
-# Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the application code to the container
-COPY . .
+# Copy the elastic.py script
+COPY elastic.py .
 
-# Run the elastic consumer script
 CMD ["python", "elastic.py"]
-
