@@ -100,17 +100,6 @@ services:
     environment:
       KAFKA_BOOTSTRAP_SERVERS: kafka1:9092,kafka2:9094,kafka3:9096
 
-  elastic:
-    build: ./elastic
-    image: sdt2-elastic
-    container_name: sdt2-elastic
-    networks:
-      - kafka-network
-    depends_on:
-      - kafka1
-      - kafka2
-      - kafka3
-
   state-machine:
     build: ./state-machine
     image: sdt2-state-machine
@@ -119,32 +108,48 @@ services:
       - kafka-topic-init
     networks:
       - kafka-network
-    command: ["python", "state_machine.py"] # Run your script to keep it running
+    command: ["python", "state_machine.py"]
 
   grpc-server:
-    build: ./grpc_server  # Path to your gRPC server Dockerfile
+    build: ./grpc_server
     image: sdt2-grpc-server
     container_name: sdt2-grpc-server
     depends_on:
       - kafka-topic-init
     networks:
       - kafka-network
-    command: ["python", "grpc_server.py"] # Automatically runs grpc_server.py
+    command: ["python", "grpc_server.py"]
 
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.17.9
+    container_name: tarea2-elasticsearch
     environment:
       - discovery.type=single-node
       - ES_JAVA_OPTS=-Xms512m -Xmx512m
     ports:
       - "9200:9200"
+    user: "1000"  # Run Elasticsearch as a non-root user (adjust UID if necessary)
     networks:
       - kafka-network
+
+  elastic-ingest:
+    build: ./elastic
+    image: sdt2-elastic-ingest
+    container_name: sdt2-elastic-ingest
+    depends_on:
+      - elasticsearch
+      - kafka1
+      - kafka2
+      - kafka3
+    networks:
+      - kafka-network
+    command: ["python3", "/app/elastic.py"]
 
   kibana:
     image: docker.elastic.co/kibana/kibana:7.17.9
     depends_on:
       - elasticsearch
+      - elastic-ingest
     environment:
       ELASTICSEARCH_HOSTS: "http://elasticsearch:9200"
     ports:
@@ -163,4 +168,3 @@ volumes:
 networks:
   kafka-network:
     driver: bridge
-
