@@ -2,6 +2,9 @@
 
 Este proyecto implementa un sistema distribuido con Kafka, gRPC, y Elasticsearch, diseñado para procesar y monitorear datos en tiempo real, simulando ventas de productos online.
 
+<h2>🚀 Demo</h2>
+[https://www.youtube.com/watch?v=aG5bJpCkGF4]
+
 ## Requisitos Previos
 
 - **Kafka**: Asegúrate de tener Kafka instalado y configurado.
