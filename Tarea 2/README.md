@@ -15,22 +15,22 @@ Este proyecto implementa un sistema distribuido con Kafka, gRPC, y Elasticsearch
    cd Sistemas_Distribuidos/Tarea\ 2
    ```
 2. **Generar los conjuntos de datos**:
-   Desde la carpeta raíz del proyecto, ejecuta el script dataset.py para crear los tres datasets que utilizará el sistema.
+    Desde la carpeta raíz del proyecto, ejecuta el script dataset.py para crear los tres datasets que utilizará el sistema.
 ```bash
 python dataset.py
 ```
-3. **Construir y levantar los contenedoresConstruir y levantar los contenedores**:
-   Ejecuta los siguientes comandos desde la carpeta raíz para construir y levantar todos los servicios en contenedores Docker:
+3. **Construir y levantar los contenedores**: 
+    Ejecuta los siguientes comandos desde la carpeta raíz para construir y levantar todos los servicios en contenedores Docker:
    ```bash
    docker compose build
    docker compose up -d
    ```
-4. **Acceder a las interfaces web**
-   Kafka UI: Accede a http://localhost:8080 para ver la interfaz de Kafka y monitorear los tópicos.
+4. **Acceder a las interfaces web**:
+    Kafka UI: Accede a http://localhost:8080 para ver la interfaz de Kafka y monitorear los tópicos.
    Kibana (Elasticsearch UI): Accede a http://localhost:5601 para ver los datos en Elasticsearch.
    
-5. **Ejecutar los servicios individuales**
-   En diferentes terminales, navega a las carpetas y ejecuta cada servicio de la siguiente manera:
+5. **Ejecutar los servicios individuales**:
+    En diferentes terminales, navega a las carpetas y ejecuta cada servicio de la siguiente manera:
       gRPC Server:
       ```bash
       cd grpc_server
@@ -51,8 +51,8 @@ python dataset.py
       cd notification_service
       python notification_service.py
       ```
-6. **Inyectar datos a través del gRPC Client**
-    Finalmente, desde otra terminal, navega a la carpeta grpc_server y ejecuta el cliente gRPC para comenzar a inyectar datos:
+6. **Inyectar datos a través del gRPC Client**:
+     Finalmente, desde otra terminal, navega a la carpeta grpc_server y ejecuta el cliente gRPC para comenzar a inyectar datos:
    ```bash
    cd grpc_server
    python grpc_client.py
