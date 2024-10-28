@@ -1,6 +1,6 @@
 # Sistemas Distribuidos - Tarea 2
 
-Este proyecto implementa un sistema distribuido con Kafka, gRPC, y Elasticsearch, diseñado para procesar y monitorear datos en tiempo real.
+Este proyecto implementa un sistema distribuido con Kafka, gRPC, y Elasticsearch, diseñado para procesar y monitorear datos en tiempo real, simulando ventas de productos online.
 
 ## Requisitos Previos
 
