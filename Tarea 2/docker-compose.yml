@@ -141,6 +141,7 @@ services:
       - kafka1
       - kafka2
       - kafka3
+      - state-machine
     networks:
       - kafka-network
     command: ["python3", "/app/elastic.py"]
@@ -156,6 +157,25 @@ services:
       - "5601:5601"
     networks:
       - kafka-network
+
+  notification_service:
+    build: ./notification_service  
+    image: sdt2-notification-service
+    container_name: sdt2-notification-service
+    depends_on:
+      - kafka1
+      - kafka2
+      - kafka3
+      - state-machine
+    networks:
+      - kafka-network
+    environment:
+      - SMTP_SERVER=smtp.gmail.com  # Assuming using Gmail for SMTP
+      - SMTP_PORT=465
+      - EMAIL_USER=correodetareas11.9@gmail.com  # Replace with your actual email
+      - EMAIL_PASSWORD=wssw jgch kfyc fzyr  # Store securely or set up secrets
+      - KAFKA_BOOTSTRAP_SERVERS=kafka1:9092,kafka2:9094,kafka3:9096
+    command: ["python3", "/app/notification_service.py"]
 
 volumes:
   kafka_data1:
