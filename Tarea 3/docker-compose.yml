@@ -1,0 +1,150 @@
+version: '3'
+
+services:
+  zookeeper:
+    image: bitnami/zookeeper:3.9.1
+    container_name: zookeeper
+    tmpfs: "/zktmp"
+    environment:
+      ALLOW_ANONYMOUS_LOGIN: 'yes'
+    ports:
+      - "2181:2181"
+      - "8083:8080"  # Zookeeper UI on 8083
+    networks:
+      - kafka-network
+
+  kafka1:
+    image: bitnami/kafka:3.7.0
+    container_name: kafka1
+    depends_on:
+      - zookeeper
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_CFG_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_CFG_LISTENERS: INTERNAL://:9092,EXTERNAL://0.0.0.0:9093
+      KAFKA_CFG_ADVERTISED_LISTENERS: INTERNAL://kafka1:9092,EXTERNAL://localhost:9093
+      KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP: INTERNAL:PLAINTEXT,EXTERNAL:PLAINTEXT
+      KAFKA_CFG_INTER_BROKER_LISTENER_NAME: INTERNAL
+      ALLOW_PLAINTEXT_LISTENER: 'yes'
+      # Ensure a single partition for topics
+      KAFKA_CFG_DEFAULT_PARTITION_COUNT: 1
+    ports:
+      - "9092:9092"
+      - "9093:9093"
+    networks:
+      - kafka-network
+
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: kafka-ui
+    depends_on:
+      - kafka1
+    ports:
+      - "8082:8080"  # Kafka-UI exposed on 8082
+    environment:
+      KAFKA_CLUSTERS_0_NAME: local
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka1:9092
+      KAFKA_CLUSTERS_0_ZOOKEEPER: zookeeper:2181
+    networks:
+      - kafka-network
+
+  cassandra:
+    build: ./cassandra  # Build from the cassandra folder that contains the Dockerfile
+    container_name: cassandra
+    ports:
+      - "9042:9042"
+    networks:
+      - kafka-network
+    healthcheck:
+      test: ["CMD", "cqlsh", "-e", "describe keyspaces"]
+      interval: 10s
+      retries: 5
+      start_period: 20s
+      timeout: 5s
+
+
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.9
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+    ports:
+      - "9200:9200"
+    user: "1000"  # Run Elasticsearch as a non-root user (adjust UID if necessary)
+    networks:
+      - kafka-network
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.17.9
+    depends_on:
+      - elasticsearch
+    environment:
+      ELASTICSEARCH_HOSTS: "http://elasticsearch:9200"
+    ports:
+      - "5601:5601"
+    networks:
+      - kafka-network
+
+  scrapper:
+    build: ./scrapper
+    image: scraper
+    container_name: scrapper
+    depends_on:
+      - kafka1
+    networks:
+      - kafka-network
+    command: ["/bin/bash", "main.sh"]
+
+  spark:
+    user: "0"
+    image: docker.io/bitnami/spark:3.5
+    container_name: spark
+    build:
+      context: ./spark_consumer
+      dockerfile: Dockerfile
+    environment:
+      - SPARK_MODE=master
+      - PYSPARK_PYTHON=/opt/bitnami/python/bin/python3
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+      - SPARK_USER=spark     
+      - SPARK_UI_PORT=8080 
+      - SPARK_ES_NODES=elasticsearch:9200  # Set Elasticsearch nodes to connect to             
+    ports:
+      - '8080:8080'
+      - '7077:7077'      
+    depends_on:
+      - kafka1
+      - elasticsearch
+    networks:
+      - kafka-network
+
+  spark-worker:
+    user: "0"  
+    image: docker.io/bitnami/spark:3.5
+    container_name: spark-worker
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark:7077
+      - SPARK_WORKER_MEMORY=1G
+      - SPARK_WORKER_CORES=1
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+      - SPARK_USER=spark
+      - PYSPARK_PYTHON=/opt/bitnami/python/bin/python3
+    depends_on:
+      - spark
+    networks:
+      - kafka-network
+
+networks:
+  kafka-network:
+    name: kafka-network
+    driver: bridge
+

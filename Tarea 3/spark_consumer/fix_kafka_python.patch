@@ -1,0 +1,6 @@
+--- codec.py.orig
++++ codec.py
+@@ -1,1 +1,1 @@
+-from kafka.vendor.six.moves import range
++from six.moves import range
+
